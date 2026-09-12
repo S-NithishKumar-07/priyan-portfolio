@@ -118,6 +118,12 @@ export default function Home() {
       return;
     }
 
+    const whatsappNumber = "919843258406";
+    const text = `Hello Shanmuga Priyan!\n\n*Name:* ${formState.name}\n*Email:* ${formState.email}\n*Message:* ${formState.message}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    
+    window.open(whatsappUrl, '_blank');
+
     setFormSubmitted(true);
     setTimeout(() => {
       setFormSubmitted(false);
